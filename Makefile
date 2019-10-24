@@ -24,11 +24,3 @@ test:
 clean:
 		$(GOCLEAN)
 		rm -f $(BINARY_NAME)-$(BUILD_VERSION)*
-deps:
-	$(GOGET) github.com/karalabe/xgo
-	$(DEPENSURE)
-
-build-linux:
-build-mac:
-		GOOS=darwin GOARCH=amd64 $(GOBUILD) -o $(BINARY_MAC) -v
-build-win:
